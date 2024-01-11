@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-07T20:57:05.106Z",
+    "end": "2024-01-07T20:57:06.374Z",
+    "duration": 1268,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d765189f-c1a0-45e1-8fb2-fb8facc7cd77",
+      "title": "",
+      "fullFile": "/Users/nihalcevik/Desktop/api-automation/tests/userTests.js",
+      "file": "/tests/userTests.js",
+      "beforeHooks": [],
+      "afterHooks": [
+        {
+          "title": "\"after each\" hook in \"{root}\"",
+          "fullTitle": "\"after each\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "checkForUnfulfilledExpectations.call(this);\nrecordedExpects = [];",
+          "err": {},
+          "uuid": "7075bebb-31fc-44f2-95be-41e120508f56",
+          "parentUUID": "d765189f-c1a0-45e1-8fb2-fb8facc7cd77",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ee85bbd-89df-49b9-89c6-377fa5f75c13",
+          "title": "User Module",
+          "fullFile": "/Users/nihalcevik/Desktop/api-automation/tests/userTests.js",
+          "file": "/tests/userTests.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET - GetUserInfo Invalid User",
+              "fullTitle": "User Module GET - GetUserInfo Invalid User",
+              "timedOut": false,
+              "duration": 685,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resBody ={\n \"code\": 1,\n \"type\": \"error\",\n \"message\": \"User not found\"\n};\n     \nconst response = chakram.get(\"https://petstore.swagger.io/v2/user/testnihal181200\");\nexpect(response).to.have.status(404);\nexpect(response).to.comprise.of.json(resBody); \nexpect(response).to.have.header('content-type' , 'application/json'); \nreturn chakram.wait();",
+              "err": {},
+              "uuid": "585c49a1-79f9-45e1-9ebd-37eab81fbe29",
+              "parentUUID": "4ee85bbd-89df-49b9-89c6-377fa5f75c13",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST - CreatetUser",
+              "fullTitle": "User Module POST - CreatetUser",
+              "timedOut": false,
+              "duration": 145,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resBody ={\n    \"code\": 200,\n    \"type\": \"unknown\",\n    \"message\": \"1861616119\"\n};\nconst body = {\n    \"id\": 1861616119,\n    \"username\": \"testnihal1812890\",\n    \"firstName\": \"test66\",\n    \"lastName\": \"nihal66\",\n    \"email\": \"nihal.cevik.test@test.com\",\n    \"password\": \"test18\",\n    \"phone\": \"05312345679\",\n    \"userStatus\": 0\n  }\nconst response = chakram.post(\"https://petstore.swagger.io/v2/user\", body);\nexpect(response).to.have.status(200);\nexpect(response).to.comprise.of.json(resBody);\nreturn chakram.wait();",
+              "err": {},
+              "uuid": "6199baf2-2be6-4ae9-853b-4c53c3a60d67",
+              "parentUUID": "4ee85bbd-89df-49b9-89c6-377fa5f75c13",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET - GetUserInfo",
+              "fullTitle": "User Module GET - GetUserInfo",
+              "timedOut": false,
+              "duration": 143,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resBody = {\n    \"id\": 18616161191,\n    \"username\": \"testnihal181289099\",\n    \"firstName\": \"test661\",\n    \"lastName\": \"nihal661\",\n    \"email\": \"nihal.cevik.test11@test.com\",\n    \"password\": \"test181\",\n    \"phone\": \"053123456791\",\n    \"userStatus\": 1\n };\n\nconst response = chakram.get(\"https://petstore.swagger.io/v2/user/testnihal181289099\");\nexpect(response).to.have.status(200);\nexpect(response).to.comprise.of.json(resBody); \nexpect(response).to.have.header('content-type' , 'application/json'); \nreturn chakram.wait();",
+              "err": {},
+              "uuid": "78b1b12c-7ec0-4946-beb1-9be87ff13a82",
+              "parentUUID": "4ee85bbd-89df-49b9-89c6-377fa5f75c13",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE - DeletetUser",
+              "fullTitle": "User Module DELETE - DeletetUser",
+              "timedOut": false,
+              "duration": 143,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resBody ={\n    \"code\": 200,\n    \"type\": \"unknown\",\n    \"message\": \"testnihal181289099\"\n};\nconst response = chakram.delete(\"https://petstore.swagger.io/v2/user/testnihal181289099\");\nexpect(response).to.have.status(200);\nexpect(response).to.comprise.of.json(resBody); \nexpect(response).to.have.header('content-type' , 'application/json'); \nreturn chakram.wait();",
+              "err": {},
+              "uuid": "772a50d2-a599-43f6-8421-8481e1084abc",
+              "parentUUID": "4ee85bbd-89df-49b9-89c6-377fa5f75c13",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT - UpdateUserInfo",
+              "fullTitle": "User Module PUT - UpdateUserInfo",
+              "timedOut": false,
+              "duration": 145,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resBody ={\n    \"code\": 200,\n    \"type\": \"unknown\",\n    \"message\": \"18616161191\"\n}\nconst body = {\n    \"id\": 18616161191,\n    \"username\": \"testnihal181289099\",\n    \"firstName\": \"test661\",\n    \"lastName\": \"nihal661\",\n    \"email\": \"nihal.cevik.test11@test.com\",\n    \"password\": \"test181\",\n    \"phone\": \"053123456791\",\n    \"userStatus\": 1\n  };\nconst response = chakram.put(\"https://petstore.swagger.io/v2/user/testnihal18\", body);\nexpect(response).to.have.status(200);\nexpect(response).to.comprise.of.json(resBody); \nexpect(response).to.have.header('content-type' , 'application/json'); \nreturn chakram.wait();",
+              "err": {},
+              "uuid": "115cfe29-2229-4f55-b40f-81382ab89623",
+              "parentUUID": "4ee85bbd-89df-49b9-89c6-377fa5f75c13",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "585c49a1-79f9-45e1-9ebd-37eab81fbe29",
+            "6199baf2-2be6-4ae9-853b-4c53c3a60d67",
+            "78b1b12c-7ec0-4946-beb1-9be87ff13a82",
+            "772a50d2-a599-43f6-8421-8481e1084abc",
+            "115cfe29-2229-4f55-b40f-81382ab89623"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1261,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 90000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

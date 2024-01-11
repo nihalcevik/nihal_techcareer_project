@@ -1,0 +1,16 @@
+
+> petstore-api-testing@1.o.o test
+> mocha tests/ --timeout 90000  --exit --reporter spec
+
+
+
+  User Module
+    ✔ GET - GetUserInfo Invalid User (798ms)
+    ✔ POST - CreatetUser (142ms)
+    ✔ GET - GetUserInfo (142ms)
+    ✔ DELETE - DeletetUser (141ms)
+    ✔ PUT - UpdateUserInfo (141ms)
+
+
+  5 passing (1s)
+
